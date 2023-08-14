@@ -21,7 +21,9 @@ function calcDano() {
     var divina10 = document.getElementById("ddd10").value;
 
     var dragonP = document.getElementById("ddp").value;
+    var dragonP2 = document.getElementById("ddp2").value;
     var dragonL = document.getElementById("ddl").value;
+    var dragonL2 = document.getElementById("ddl2").value;
 
     var gen1 = document.getElementById("dg1").value;
     var gen2 = document.getElementById("dg2").value;
@@ -35,7 +37,6 @@ function calcDano() {
     var gen10 = document.getElementById("dg10").value;
 
     var danoTotal = document.getElementById("ddt");
-    // var calDano = document.getElementById("dcalcular");
 
     //Conta//
     var conta6 = (gemas6.value * 840);
@@ -83,6 +84,8 @@ function calcDano() {
 
     var dgP = totalBase * (dragonP / 100);
     var dgL = totalBase * (dragonL / 100);
+    var dgP2 = totalBase * (dragonP2 / 100);
+    var dgL2 = totalBase * (dragonL2 / 100);
 
     var g1 = totalBase * (gen1 / 100);
     var g2 = totalBase * (gen2 / 100);
@@ -95,8 +98,7 @@ function calcDano() {
     var g9 = totalBase * (gen9 / 100);
     var g10 = totalBase * (gen10 / 100);
 
-    var porcentagemTotal = parseInt((dv2 + dv3 + dv4 + dv5 + dv6 + dv7 + dv8 + dv9 + dv10 + dgP + dgL + g1 + g2 + g3 + g4 + g5 + g6 + g7 + g8 + g9 + g10));
+    var porcentagemTotal = parseInt((dv2 + dv3 + dv4 + dv5 + dv6 + dv7 + dv8 + dv9 + dv10 + dgP + dgP2 + dgL + dgL2 + g1 + g2 + g3 + g4 + g5 + g6 + g7 + g8 + g9 + g10));
     var tudo = (dominio + porcentagemTotal);
-    // var todoDano = parseInt((totalBase + tudo));
     danoTotal.innerHTML = parseInt((totalBase + tudo));
 }

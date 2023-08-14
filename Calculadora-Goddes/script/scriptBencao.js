@@ -27,18 +27,19 @@ function calc() {
     }else if (valuetype == 10) {
         valueCont = ((0,24)-2) / (100), valueqb = 15;
     }
-    var result = ((valueqb * valueCont)).toFixed(0);
+    var result = (valueqb * valueCont);
     var gemas = valueqb * 100;
-    var quantgemas = result * valueqg;
+    var quantgemas = (result * valueqg).toFixed(2);
     var gemasPgemas = gemas * valueqg;
+   
 
     var h1 = document.getElementById("resul");
     var h2 = document.getElementById("resul2");
     var h3 = document.getElementById("resul3");
     var h4 = document.getElementById("resul4");
     
-    h1.innerHTML = "Porcentagem por Gemas: " + result;
-    h2.innerHTML = "Gemas Gastas em cada: " + gemas;
-    h3.innerHTML = "Porcentagem Total: " + quantgemas;
-    h4.innerHTML = "Gastos Total: " + gemasPgemas;
+    h1.innerHTML = "Porcentagem por Gemas: " + result + '<hr>';
+    h2.innerHTML = "Gemas Gastas em cada: " + gemas + '<hr>';
+    h3.innerHTML = "Porcentagem Totais: " + quantgemas + '<hr>';
+    h4.innerHTML = "Gastos Totais: " + gemasPgemas;
 }
